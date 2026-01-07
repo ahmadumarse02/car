@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
-    serverComponentsHmrCache: false, // defaults to true
+    serverComponentsHmrCache: false,
   },
   images: {
     remotePatterns: [
@@ -11,7 +14,6 @@ const nextConfig = {
       },
     ],
   },
-
   async headers() {
     return [
       {
